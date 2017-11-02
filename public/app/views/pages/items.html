@@ -1,0 +1,41 @@
+<div class="page-header">
+    <h1>
+        Items
+        <a href="/item/create" class="btn btn-defaul">
+            <span class="glyphicon glyphicon-plus>"></span>
+            New Item
+        </a>
+    </h1>
+</div>
+
+<!-- LOADING MESSAGE-->
+<div class="jumbotron text-center" ng-show="item.processing">
+    <span class="glyphicon glyphicon-repeat spinner"></span>
+    <p> Loading Item ...</p>
+</div>
+
+<table class="table table-bordered table-striped" ng-show="item.items">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Location</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <!-- LOOP OVER THE USERS -->
+    <tr ng-repeat="itemTemp in item.items">
+        <td>{{ itemTemp._id }}</td>
+        <td>{{ itemTemp.name }}</td>
+        <td>{{ itemTemp.price }}</td>
+        <td>{{ itemTemp.quantity }}</td>
+        <td>{{ itemTemp.location }}</td>
+        <td><a href="#"
+               ng-click="item.deleteItem(itemTemp._id)"
+               class="btn btn-primary"> Delete</a></td>
+    </tr>
+    </tbody>
+</table>

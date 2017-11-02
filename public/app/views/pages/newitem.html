@@ -1,0 +1,66 @@
+<div class = "page-header">
+    <h1>Create Item
+        <a href = "/items" class = "btn btn-defaul">
+            <span class = "glyphicon glyphicon-plus>"></span>
+            Back To Items
+        </a>
+    </h1>
+</div>
+
+<form class = "form-horizontal" ng-submit="item.saveItem()">
+
+    <div class = "form-group">
+        <label class = "col-sm-2 control-label">Name</label>
+        <div class = "col-sm-6">
+            <input type = "text"
+                   class = "form-control"
+                   ng-model = "item.itemData.name">
+        </div>
+    </div>
+
+    <div class = "form-group">
+        <label class = "col-sm-2 control-label">Price</label>
+        <div class = "col-sm-6">
+            <input type = "number"
+                   class = "form-control"
+                   ng-model = "item.itemData.price">
+        </div>
+    </div>
+
+
+    <div class = "form-group">
+        <label class = "col-sm-2 control-label">Quantity</label>
+        <div class = "col-sm-6">
+            <input type = "number"
+                   class = "form-control"
+                   ng-model = "item.itemData.quantity">
+        </div>
+    </div>
+
+    <label class = "col-sm-2 control-label">Location</label>
+    <div class = "col-sm-6">
+        <input type = "text"
+               class = "form-control"
+               ng-model = "item.itemData.location">
+        </div>
+    </div>
+
+    <div class = "form-group">
+        <div class = "col-sm-offset-2 col-sm-6">
+            <button type ="submit"
+                    class = "btn btn-success btn-lg btn-block"
+                    >Create Item</button>
+        </div>
+    </div>
+</form>
+
+<div class = "row show-hide-message" ng-show="item.message">
+    <div class = "col-sm-6 col-sm-offset-2">
+
+        <div class = "alert alert-info">
+            {{ item.message }}
+        </div>
+
+
+    </div>
+</div>
