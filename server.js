@@ -19,7 +19,7 @@ app.use(function(req,res,next){
     next();
 });
 
-mongoose.connect('mongodb://localhost/myappdatabase', {
+mongoose.connect('mongodb://mongo:27017/myappdatabase', {
     useMongoClient: true
 });
 var db = mongoose.connection;
