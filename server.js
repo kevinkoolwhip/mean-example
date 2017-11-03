@@ -5,7 +5,7 @@ var morgan = require('morgan');
 var mongoose = require('mongoose');
 var path = require('path');
 var jwt = require('jsonwebtoken');
-var server = app.listen(9090);
+var server = app.listen(8081);
 var User = require(__dirname + '/server/models/user.js');
 
 app.use(morgan('dev'));
